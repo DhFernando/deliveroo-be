@@ -1,5 +1,6 @@
-const dbConfig = require('../config/dbConfig');
 const { Sequelize, DataTypes } = require('sequelize');
+
+const dbConfig = require('../config/dbConfig');
 
 const sequelize = new Sequelize(
     dbConfig.DB,
@@ -30,9 +31,9 @@ const db = {};
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
-db.Products = require('./productModel.js')(sequelize, DataTypes); // TODO
-db.Reviews = require('./reviewModel.js')(sequelize, DataTypes); // TODO
-db.Restaurant = require('./restaurantModel')(sequelize);
+db.Products = require('../models/productModel.js')(sequelize, DataTypes); // TODO
+db.Reviews = require('../models/reviewModel.js')(sequelize, DataTypes); // TODO
+db.Restaurant = require('../models/restaurantModel')(sequelize);
 
 db.sequelize.sync({ force: false })
     .then(()=>{ console.log('re-sync done!') });

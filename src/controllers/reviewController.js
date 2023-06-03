@@ -1,4 +1,4 @@
-const db = require('../models')
+const db = require('../database');
 
 // model
 const Review = db.reviews
