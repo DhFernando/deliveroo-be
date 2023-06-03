@@ -17,8 +17,6 @@ const getById = async (req, res) => {
         res.status(500).send({ error: err.message });
     }
   }
-
-  return res;
 }
 
 const getMenuByRestaurantId = async (req, res) => {
