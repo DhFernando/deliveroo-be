@@ -8,7 +8,7 @@ const getByRestaurantId = async (req, res) => {
   try {
     const restaurant = await restaurantService.getById(id);
     const reviews = await reviewService.getByRestaurantId(id);
-    res.status(200).json(reviews);
+    res.status(200).json({ data: reviews });
   } catch (err) {
     console.error(`[reviewController.getByRestaurantId]: id=${id} ${err.message}`);
     switch (err.message) {
