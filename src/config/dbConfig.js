@@ -1,13 +1,18 @@
+require('dotenv').config();
+
 module.exports = {
-    HOST: process.env.MYSQL_URL,
-    USER: process.env.MYSQL_USERNAME,
-    PASSWORD: process.env.MYSQL_PASSWORD,
-    DB: process.env.MYSQL_DATABASE,
-    dialect: 'mysql',
-    pool: {
-        max: 5,
-        min: 0,
-        acquire: 30000,
-        idle: 10000
+    development: {
+        username: process.env.MYSQL_USERNAME,
+        password: process.env.MYSQL_PASSWORD,
+        database: process.env.MYSQL_DATABASE,
+        host: process.env.MYSQL_URL,
+        port: process.env.MYSQL_PORT,
+        dialect: 'mysql',
+        pool: {
+            max: 5,
+            min: 0,
+            acquire: 30000,
+            idle: 10000
+        }
     }
 };
