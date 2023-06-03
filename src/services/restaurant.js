@@ -4,7 +4,6 @@ const errorMessage = require('../constants/error');
 
 const getById = async (id) => {
   const result = await db.Restaurant.findByPk(id);
-  console.log('res service:', result);
 
   if (result) {
     return result;
@@ -14,5 +13,5 @@ const getById = async (id) => {
 };
 
 module.exports = {
-  getById,
+  getById
 };
