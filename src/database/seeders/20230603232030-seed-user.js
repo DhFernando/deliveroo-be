@@ -7,7 +7,7 @@ module.exports = {
       {
         name: 'Admin',
         email: 'admin@localhost.com',
-        password: '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918',
+        password: '8c53956bb0252146b216955b6b754f6cb9ef24372551c31992b203e34fce1951',
         createdAt: new Date(),
         updatedAt: new Date()
       }
