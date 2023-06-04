@@ -1,5 +1,7 @@
 const { ExtractJwt, Strategy } = require('passport-jwt');
 
+const userService = require('../services/user');
+
 const applyPassportStrategy = (passport) => {
   const options = {
     jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
@@ -8,7 +10,8 @@ const applyPassportStrategy = (passport) => {
 
   passport.use(
     new Strategy(options, (payload, done) => {
-      if (payload.email === "admin@localhost.com") {
+      const user = userService.findByEmail(payload.email);
+      if (user) {
         console.log("[AUTH]: emails matched");
         return done(null, { email: payload.email });
       }
