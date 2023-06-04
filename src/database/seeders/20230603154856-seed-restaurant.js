@@ -5,14 +5,14 @@ module.exports = {
   async up (queryInterface, Sequelize) {
     await queryInterface.bulkInsert('restaurants', [
       {
-        name: 'Seed restaurant',
+        name: 'Tossed - St Martin\'s Lane',
         location: 'Colombo',
-        openHours: 'Morning to midnight',
+        openHours: 'Opens at 11:00 to 22:00',
         deliveryFee: 10,
         phoneNumber: '1234567890',
-        tags: 'these,are,some,tags',
+        tags: 'Chicken · Salads · Healthy',
         minimumOrderAmount: 25,
-        about: 'This is some text about the restaurant',
+        about: 'TAll dishes may contain traces of the following allergens: Gluten, Crustaceans, Eggs, Fish, Peanuts, Soybeans, Milk, Nuts (e.g. almonds, hazelnuts, walnuts, cashews, pecan nuts, Brazil nuts, pistachio nuts, macadamia nuts), Celery, Mustard, Sesame, Sulphur dioxide/sulphites, Lupin, Molluscs. For any questions regarding the allergen contents of specific dishes please contact the restaurant directly.',
         allergens: 'Information about the allergens in food',
         hygieneRating: 4,
         notes: 'These are the notes about the restaurant',
