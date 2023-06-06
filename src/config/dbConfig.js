@@ -14,5 +14,19 @@ module.exports = {
             acquire: 30000,
             idle: 10000
         }
+    },
+    test: {
+        username: process.env.MYSQL_USERNAME,
+        password: process.env.MYSQL_PASSWORD,
+        database: process.env.MYSQL_TEST_DATABASE,
+        host: process.env.MYSQL_URL,
+        port: process.env.MYSQL_PORT,
+        dialect: 'mysql',
+        pool: {
+            max: 5,
+            min: 0,
+            acquire: 30000,
+            idle: 10000
+        }
     }
 };
